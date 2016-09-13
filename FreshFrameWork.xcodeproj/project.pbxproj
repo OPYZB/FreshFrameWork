@@ -15,6 +15,8 @@
 		122B53951D87927500860F55 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 122B53931D87927500860F55 /* LaunchScreen.storyboard */; };
 		122B53A01D87927500860F55 /* FreshFrameWorkTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 122B539F1D87927500860F55 /* FreshFrameWorkTests.m */; };
 		122B53AB1D87927500860F55 /* FreshFrameWorkUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 122B53AA1D87927500860F55 /* FreshFrameWorkUITests.m */; };
+		122B53BA1D87947C00860F55 /* UIView+Frame.m in Sources */ = {isa = PBXBuildFile; fileRef = 122B53B91D87947C00860F55 /* UIView+Frame.m */; };
+		7040F1C49434346F46E265A1 /* libPods-FreshFrameWork.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CF5B419D75F351CAC066CF11 /* libPods-FreshFrameWork.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +53,11 @@
 		122B53A61D87927500860F55 /* FreshFrameWorkUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FreshFrameWorkUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		122B53AA1D87927500860F55 /* FreshFrameWorkUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FreshFrameWorkUITests.m; sourceTree = "<group>"; };
 		122B53AC1D87927500860F55 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		122B53B81D87947C00860F55 /* UIView+Frame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Frame.h"; sourceTree = "<group>"; };
+		122B53B91D87947C00860F55 /* UIView+Frame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Frame.m"; sourceTree = "<group>"; };
+		620ECF61E9E0247ABE662CBE /* Pods-FreshFrameWork.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FreshFrameWork.release.xcconfig"; path = "Pods/Target Support Files/Pods-FreshFrameWork/Pods-FreshFrameWork.release.xcconfig"; sourceTree = "<group>"; };
+		9C00668C5358FF67161C5812 /* Pods-FreshFrameWork.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FreshFrameWork.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FreshFrameWork/Pods-FreshFrameWork.debug.xcconfig"; sourceTree = "<group>"; };
+		CF5B419D75F351CAC066CF11 /* libPods-FreshFrameWork.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-FreshFrameWork.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +65,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7040F1C49434346F46E265A1 /* libPods-FreshFrameWork.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,6 +86,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		06BAEC89361161C4F2224EDB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CF5B419D75F351CAC066CF11 /* libPods-FreshFrameWork.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		122B53791D87927400860F55 = {
 			isa = PBXGroup;
 			children = (
@@ -85,6 +101,8 @@
 				122B539E1D87927500860F55 /* FreshFrameWorkTests */,
 				122B53A91D87927500860F55 /* FreshFrameWorkUITests */,
 				122B53831D87927500860F55 /* Products */,
+				F4AB7731268FA5F7735476ED /* Pods */,
+				06BAEC89361161C4F2224EDB /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -101,6 +119,8 @@
 		122B53841D87927500860F55 /* FreshFrameWork */ = {
 			isa = PBXGroup;
 			children = (
+				122B53B81D87947C00860F55 /* UIView+Frame.h */,
+				122B53B91D87947C00860F55 /* UIView+Frame.m */,
 				122B53881D87927500860F55 /* AppDelegate.h */,
 				122B53891D87927500860F55 /* AppDelegate.m */,
 				122B538B1D87927500860F55 /* ViewController.h */,
@@ -140,6 +160,15 @@
 			path = FreshFrameWorkUITests;
 			sourceTree = "<group>";
 		};
+		F4AB7731268FA5F7735476ED /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				9C00668C5358FF67161C5812 /* Pods-FreshFrameWork.debug.xcconfig */,
+				620ECF61E9E0247ABE662CBE /* Pods-FreshFrameWork.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -147,9 +176,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 122B53AF1D87927500860F55 /* Build configuration list for PBXNativeTarget "FreshFrameWork" */;
 			buildPhases = (
+				F3FFB22D3A8CB47123AF623A /* [CP] Check Pods Manifest.lock */,
 				122B537E1D87927500860F55 /* Sources */,
 				122B537F1D87927500860F55 /* Frameworks */,
 				122B53801D87927500860F55 /* Resources */,
+				B4CCE501065CE141DCDEE08F /* [CP] Embed Pods Frameworks */,
+				6EC5B62BD9AF904D73466ED3 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -265,11 +297,60 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		6EC5B62BD9AF904D73466ED3 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FreshFrameWork/Pods-FreshFrameWork-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B4CCE501065CE141DCDEE08F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FreshFrameWork/Pods-FreshFrameWork-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F3FFB22D3A8CB47123AF623A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		122B537E1D87927500860F55 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				122B53BA1D87947C00860F55 /* UIView+Frame.m in Sources */,
 				122B538D1D87927500860F55 /* ViewController.m in Sources */,
 				122B538A1D87927500860F55 /* AppDelegate.m in Sources */,
 				122B53871D87927500860F55 /* main.m in Sources */,
@@ -411,9 +492,11 @@
 		};
 		122B53B01D87927500860F55 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9C00668C5358FF67161C5812 /* Pods-FreshFrameWork.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = FreshFrameWork/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = yuncheda.FreshFrameWork;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -422,9 +505,11 @@
 		};
 		122B53B11D87927500860F55 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 620ECF61E9E0247ABE662CBE /* Pods-FreshFrameWork.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = FreshFrameWork/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = yuncheda.FreshFrameWork;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -496,6 +581,7 @@
 				122B53B11D87927500860F55 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		122B53B21D87927500860F55 /* Build configuration list for PBXNativeTarget "FreshFrameWorkTests" */ = {
 			isa = XCConfigurationList;
@@ -504,6 +590,7 @@
 				122B53B41D87927500860F55 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		122B53B51D87927500860F55 /* Build configuration list for PBXNativeTarget "FreshFrameWorkUITests" */ = {
 			isa = XCConfigurationList;
@@ -512,6 +599,7 @@
 				122B53B71D87927500860F55 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
